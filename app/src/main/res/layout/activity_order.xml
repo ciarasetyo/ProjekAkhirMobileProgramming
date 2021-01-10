@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:id="@+id/menuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Jus Apel ()"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageMenu"
+        app:layout_constraintStart_toStartOf="@+id/imageMenu"
+        app:layout_constraintTop_toBottomOf="@+id/imageMenu" />
+
+    <TextView
+        android:id="@+id/jumlahPesananText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Jumlah Pesanan:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuPrice" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minusBtn"
+        app:layout_constraintStart_toEndOf="@+id/minusBtn"
+        app:layout_constraintTop_toTopOf="@+id/minusBtn" />
+
+    <TextView
+        android:id="@+id/menuPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Rp. 10.000"
+        android:textColor="#838383"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/menuName"
+        app:layout_constraintStart_toStartOf="@+id/menuName"
+        app:layout_constraintTop_toBottomOf="@+id/menuName" />
+
+    <ImageView
+        android:id="@+id/imageMenu"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/applejuice" />
+
+    <ImageButton
+        android:id="@+id/minusBtn"
+        android:layout_width="40dp"
+        android:layout_height="40sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#ffffff"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/jumlahPesananText"
+        app:layout_constraintStart_toEndOf="@+id/jumlahPesananText"
+        app:layout_constraintTop_toTopOf="@+id/jumlahPesananText"
+        app:srcCompat="@drawable/minusicon" />
+
+    <ImageButton
+        android:id="@+id/plusBtn"
+        android:layout_width="43dp"
+        android:layout_height="43sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#ffffff"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/qty"
+        app:layout_constraintStart_toEndOf="@+id/qty"
+        app:layout_constraintTop_toTopOf="@+id/qty"
+        app:srcCompat="@drawable/plusicon" />
+
+    <Button
+        android:id="@+id/orderMoreBtn"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#FF9800"
+        android:text="Save &amp; Order More"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jumlahPesananText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
